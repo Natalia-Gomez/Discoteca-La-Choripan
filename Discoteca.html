@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/estilos-disco.css">
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-9 col-xl-9"> 
+                <div class="card">
+                    <div class="card-header">
+   <h4> Discoteca La Choripan :3</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="Nombre">Nombre</label>
+                              <input type="text" class="form-control" id="Nombre"  placeholder="Ej: Angie Gómez">
+                            </div>
+                            <div class="form-group">
+                                <label for="Genero">Genero</label>
+                                <select class="form-control" id="Genero">
+                                  <option> </option>
+                                  <option value='Femenino'> Femenino </option>
+                                  <option value='Masculino'> Masculino</option>
+                                </select>
+                              </div>
+                            <div class="form-group">
+                                <label for="Edad">Edad</label>
+                                <input type="text" class="form-control" id="Edad" placeholder="Ej: 24">
+                            </div>
+
+                            <button type="button" class="btn btn-success" onclick="Validacion ()">Enviar</button>
+
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                     
+
+    <script>
+
+  function Validacion() {
+
+let Nombre = document.getElementById ('Nombre').value
+let Genero = document.getElementById ('Genero').value
+let Edad = document.getElementById ('Edad').value
+
+if (Edad<"18"){
+alert ("No puedes entrar, eres menor de edad :)")
+}else{
+
+    alert ("Welcome to the choripan") 
+
+    if(Genero=="Masculino"){
+        alert ("Debes pagar 30.000 pesos")
+
+    }else{
+      alert ("Debes pagar 15.000 pesos")
+    }
+} 
+
+
+
+  }
+ 
+     </script>
+ 
+
+
+    <script src="./js/jquery.min.3.6.js"> </script>
+    <script src="./bootstrap/jss/bootstrap.bundle.min.js"></script>
+</body>
+</html>
